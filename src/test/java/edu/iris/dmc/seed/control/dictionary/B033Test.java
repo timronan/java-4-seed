@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import edu.iris.dmc.seed.builder.BlocketteBuilder;
 
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class B033Test {
