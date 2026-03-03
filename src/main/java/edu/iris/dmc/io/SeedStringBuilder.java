@@ -66,7 +66,7 @@ public class SeedStringBuilder {
 
 		append(":").leftPad(time.getSecond(), 2, '0');
 
-		append(".").rightPad(time.getTenthMilliSecond(), 4, '0');
+		append(".").leftPad(time.getTenthMilliSecond(), 4, '0');
 		return this;
 	}
 

@@ -1,11 +1,10 @@
 package edu.iris.dmc;
 
-import org.junit.platform.runner.JUnitPlatform;
+
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.SuiteDisplayName;
-import org.junit.runner.RunWith;
 
-@RunWith(JUnitPlatform.class)
+// JUnit 5 does not require @RunWith. Use only JUnit 5 suite annotations.
 @SuiteDisplayName("JUnit Platform Suite for validator")
 @SelectPackages("edu.iris.dmc")
 public final class AllTestsSuite {
