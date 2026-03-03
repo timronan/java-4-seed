@@ -102,11 +102,11 @@ public class B010 extends AbstractBlockette implements IndexBlockette {
 		builder.append(this.endTime).append("~");
 		builder.append(this.volumeTime).append("~");
 		
-		if(this.organization.length()>80) {
+		if(this.organization != null && this.organization.length()>80) {
 			this.organization = this.organization.substring(0, Math.min(this.organization.length(), 80));
 		}
 		builder.append(this.organization).append("~");
-		if(this.label.length()>80) {
+		if(this.label != null && this.label.length()>80) {
 			this.label = this.label.substring(0, Math.min(this.label.length(), 80));
 		}
 		builder.append(this.label).append("~");
