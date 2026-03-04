@@ -80,7 +80,7 @@ public class BTime {
 		time.setHour(cal.get(Calendar.HOUR_OF_DAY));
 		time.setMinute(cal.get(Calendar.MINUTE));
 		time.setSecond(cal.get(Calendar.SECOND));
-		time.setTenthMilliSecond(cal.get(Calendar.MILLISECOND));
+		time.setTenthMilliSecond(cal.get(Calendar.MILLISECOND) * 10);
 		return time;
 	}
 
