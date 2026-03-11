@@ -2,6 +2,9 @@ package edu.iris.dmc.seed;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import java.nio.charset.StandardCharsets;
 
 import java.time.ZonedDateTime;
 
@@ -35,5 +38,13 @@ public class BTimeTest {
 		assertEquals("1990,029,08:36:36.222200000", time.toSeedString());
 		
 		ZonedDateTime.parse("2012-06-30T12:30:40+01:00[+01:00]");
+	}
+
+	@ParameterizedTest
+	@ValueSource(strings = {"1994,029,08:36:36.1381", "1994,029,08:36:36.0138"})
+	public void testValueOfFromByteArray(String s) throws Exception {
+		byte[] bytes = s.getBytes(StandardCharsets.US_ASCII);
+		BTime time = BTime.valueOf(bytes);
+		assertEquals(s, time.toSeedString());
 	}
 }
